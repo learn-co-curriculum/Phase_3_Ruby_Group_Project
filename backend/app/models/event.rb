@@ -2,8 +2,13 @@ class Event < ActiveRecord::Base
     belongs_to :attraction
     belongs_to :venue
 
+
+    def self.add_image
+        self.all.map{|e| e[:imageUrl] = e.imageUrl}
+    end
+    
     def self.date
-        self.all.sort_by{|e| e.date}
+       self.all.sort_by{|e| e.date}
     end
 
     def self.has_price
@@ -18,10 +23,6 @@ class Event < ActiveRecord::Base
         self.has_price.sort_by{|e| -1*(e.priceMax)}
     end
 
-    def self.add_image
-        
-    end
-
     def self.formatted
         self.all.map{|e| {
             :name => e.name,
@@ -29,6 +30,7 @@ class Event < ActiveRecord::Base
             :info => e.info,
             :priceMin => e.priceMin,
             :priceMax => e.priceMax,
+            :imageUrl => e.imageUrl,
             :venueName => e.venue.name,
             :image => e.venue.imageUrl,
             :city => e.venue.city,

@@ -20,6 +20,26 @@ class Application
   
       return [200, {'Content-Type' => 'application/json'}, [dates.to_json]]
 
+    elsif req.path.match(/high/) && req.get?
+      high = Event.expensive
+  
+      return [200, {'Content-Type' => 'application/json'}, [high.to_json]]
+
+    elsif req.path.match(/low/) && req.get?
+      low = Event.cheap
+  
+      return [200, {'Content-Type' => 'application/json'}, [low.to_json]]
+
+    elsif req.path.match(/max/) && req.get?
+      max = Attraction.max_events
+  
+      return [200, {'Content-Type' => 'application/json'}, [[max].to_json]]
+    
+    elsif req.path.match(/min/) && req.get?
+      min = Attraction.min_events
+  
+      return [200, {'Content-Type' => 'application/json'}, [[min].to_json]]
+
     else
       resp.write "Path Not Found"
 
