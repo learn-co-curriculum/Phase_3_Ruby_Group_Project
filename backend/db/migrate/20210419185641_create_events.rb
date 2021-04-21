@@ -7,7 +7,9 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.text :info
       t.float :priceMin
       t.float :priceMax
+      t.string :imageUrl
       t.belongs_to :venue
+      t.string :venueName
       t.belongs_to :attraction
     end
   end

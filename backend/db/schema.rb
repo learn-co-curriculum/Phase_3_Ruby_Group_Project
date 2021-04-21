@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2021_04_19_185641) do
     t.string "igUrl"
     t.string "ytUrl"
     t.string "imageUrl"
+    t.text "info"
   end
 
   create_table "events", force: :cascade do |t|
@@ -26,7 +27,9 @@ ActiveRecord::Schema.define(version: 2021_04_19_185641) do
     t.text "info"
     t.float "priceMin"
     t.float "priceMax"
+    t.string "imageUrl"
     t.integer "venue_id"
+    t.string "venueName"
     t.integer "attraction_id"
     t.index ["attraction_id"], name: "index_events_on_attraction_id"
     t.index ["venue_id"], name: "index_events_on_venue_id"

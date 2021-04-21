@@ -5,6 +5,7 @@ class CreateAttractions < ActiveRecord::Migration[5.2]
       t.string :igUrl
       t.string :ytUrl
       t.string :imageUrl
+      t.text :info
     end
   end
 end

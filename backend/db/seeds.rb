@@ -58,9 +58,10 @@ events["_embedded"]["events"].each do |event|
         eventMin = event["priceRanges"][0]["min"]
         eventMax = event["priceRanges"][0]["max"]
     end
+    eventImg = event["images"][0]["url"]
     
     a=Attraction.find_by(name: event["_embedded"]["attractions"][0]["name"])
     v=Venue.find_by(name: event["_embedded"]["venues"][0]["name"])
 
-    Event.create(name: eventName, date: eventDate, info: eventInfo, priceMin: eventMin, priceMax: eventMax, attraction_id: a.id, venue_id: v.id)
+    Event.create(name: eventName, date: eventDate, info: eventInfo, priceMin: eventMin, priceMax: eventMax, imageUrl: eventImg, venueName: Venue.find(v.id).name,attraction_id: a.id, venue_id: v.id)
 end
