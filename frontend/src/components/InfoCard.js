@@ -5,13 +5,15 @@ class InfoCard extends React.Component {
     render() {
         return (
         <div className="modal">
-           <h2>{this.props.event.info}</h2>
+            {this.props.event.info &&
+           <h2 className="info">{this.props.event.info}</h2>
+            }
            {this.props.event.ytUrl &&
-           <a href={this.props.event.ytUrl}>Facebook</a>
+           <a href={this.props.event.ytUrl} className="link">Facebook</a>
             }
             <br/>
             {this.props.event.igUrl &&
-           <a href={this.props.event.igUrl}>Twitter</a>
+           <a href={this.props.event.igUrl} className="link">Twitter</a>
             }
         </div>
         )
