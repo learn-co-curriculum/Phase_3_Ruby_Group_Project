@@ -16,6 +16,11 @@ class Application
 
       return [200, { 'Content-Type' => 'application/json' }, [ produces.to_json ]]
 
+    elsif req.path == ('/recipes') && req.get?
+      recipes = Recipe.all
+
+      return [200, { 'Content-Type' => 'application/json' }, [ recipes.to_json ]]
+
     elsif req.path.match('/recipes/') && req.get?
       id = req.path.split("/").last
 
@@ -25,6 +30,13 @@ class Application
       produces.map{|produce| recipes.push(produce.recipe)}
 
       return [200, { 'Content-Type' => 'application/json' }, [ recipes.uniq.to_json ]]
+
+    elsif req.path.match("/recipes") && req.post?
+      hash = JSON.parse(req.body.read)
+        
+      new_recipe = Recipe.create(hash)
+      
+      return [201, { 'Content-Type' => 'application/json' }, [ new_recipe.consistent_data ]]
 
     else
       resp.write "Path Not Found"
