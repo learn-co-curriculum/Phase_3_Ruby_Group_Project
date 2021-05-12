@@ -1,5 +1,6 @@
 class Recipe < ActiveRecord::Base
-    has_many :produces
+    has_many :produce_recipes
+    has_many :produces, through: :produce_recipes
     has_many :seasons, through: :produces
 
     def consistent_data

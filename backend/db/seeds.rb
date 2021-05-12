@@ -1,217 +1,188 @@
 Produce.destroy_all
 Recipe.destroy_all
 Season.destroy_all
+ProduceRecipe.destroy_all 
 
 produces = [
     {
         name: "Brussel Sprouts",
         image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Brussels_sprout_closeup.jpg",
         on_list: false,
-        season_id: 1,
-        recipe_id: 4
+        season_id: 1
     },
     {
         name: "Beets",
         image: "https://www.producemarketguide.com/sites/default/files/Commodities.tar/Commodities/beets_commodity-page.png",
         on_list: false,
-        season_id: 1,
-        recipe_id: 5
+        season_id: 1
     },
     {
         name: "Carrots",
         image: "https://www.jessicagavin.com/wp-content/uploads/2019/02/carrots-7-1200.jpg",
         on_list: false,
-        season_id: 1,
-        recipe_id: 1
+        season_id: 1
     },
     {
         name: "Celery",
         image: "https://freshpoint.com/wp-content/uploads/commodity-celery.jpg",
         on_list: false,
-        season_id: 1,
-        recipe_id: 1
+        season_id: 1
     },
     {
         name: "Oranges",
         image: "https://cdn.theculturetrip.com/wp-content/uploads/2018/03/origins-of-the-word-orange.jpg",
         on_list: false,
-        season_id: 1,
-        recipe_id: 2
+        season_id: 1
     },
     {
         name: "Limes",
         image: "https://lh3.googleusercontent.com/proxy/V0ew2OF6WsFJG41d_yfpoStpOg9UQKEZGRWuU4zqdJvS7cHR6t2OIaezXGgvtK4dmVuvFAXh1luDRh_RHC1pXmNVnjM7CLokkwKFo9evYTd0ttjiBjmQpQ",
         on_list: false,
-        season_id: 1,
-        recipe_id: 3
+        season_id: 1
     },
     {
         name: "Potatoes",
         image: "https://cdn.cheapism.com/images/081516_national_potato_day_recipe.2e16d0ba.fill-1440x605.jpg",
         on_list: false,
-        season_id: 1,
-        recipe_id: 1
+        season_id: 1
     },
     {
         name: "Spinach",
         image: "https://cdn.mos.cms.futurecdn.net/atyrpYQoxdoTzmEgu8HMWE.jpg",
         on_list: false,
-        season_id: 2,
-        recipe_id: 6
+        season_id: 2
     },
     {
         name: "Asparagus",
         image: "https://images.heb.com/is/image/HEBGrocery/000319073",
         on_list: false,
-        season_id: 2,
-        recipe_id: 10
+        season_id: 2
     },
     {
         name: "Kale",
         image: "https://cdn.shopify.com/s/files/1/0276/5253/products/DSC01987_final_cropped_for_website_0ab1e79f-f3a4-4167-bfc7-9af4da6c2063.jpg?v=1617375654",
         on_list: false,
-        season_id: 2,
-        recipe_id: 7
+        season_id: 2
     },
     {
         name: "Broccoli",
         image: "https://www.health.harvard.edu/media/content/images/p7_Broccoli_HH1812_gi905351392.jpg",
         on_list: false,
-        season_id: 2,
-        recipe_id: 7
+        season_id: 2
     },
     {
         name: "Mangoes",
         image: "https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/05/05/Photos/Processed/mangoes1-k22F--621x414@LiveMint.jpg",
         on_list: false,
-        season_id: 2,
-        recipe_id: 8
+        season_id: 2
     },
     {
         name: "Radishes",
         image: "https://www.thespruceeats.com/thmb/kXS52zx6Fs_Xpdth-kcQ_k05RZ8=/1885x1414/smart/filters:no_upscale()/GettyImages-994593838-de50e6d7db9a4b328fbfd17f3371dbee.jpg",
         on_list: false,
-        season_id: 2,
-        recipe_id: 9
+        season_id: 2
     },
     {
         name: "Strawberries",
         image: "https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-strawberrie-558x600.jpg",
         on_list: false,
-        season_id: 2,
-        recipe_id: 6
+        season_id: 2
     },
     {
         name: "Iceberg Lettuce",
         image: "https://media.newyorker.com/photos/5b6b08d3a676470b4ea9b91f/4:3/w_1920,h_1440,c_limit/Rosner-Lettuce.jpg",
         on_list: false,
-        season_id: 2,
-        recipe_id: 9
+        season_id: 2
     },
     {
         name: "Cherry",
         image: "https://www.usda.gov/sites/default/files/ars-bing-cherries-blog-051220.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 11
+        season_id: 3
     },
     {
         name: "Blueberry",
         image: "https://post.healthline.com/wp-content/uploads/2020/08/blueberries-1200x628-facebook-1200x628.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 12
+        season_id: 3
     },
     {
         name: "Watermelon",
         image: "https://snaped.fns.usda.gov/sites/default/files/seasonal-produce/2018-05/watermelon.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 12
+        season_id: 3
     },
     {
         name: "Tomato",
         image: "https://cdn.mos.cms.futurecdn.net/Sz2f3T3SfBfdzhm3stay9S-480-80.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 16
+        season_id: 3
     },
     {
         name: "Corn",
         image: "https://www.mayoclinichealthsystem.org/-/media/national-files/images/hometown-health/2018/corn.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 13
+        season_id: 3
     },
     {
         name: "Cucumber",
         image: "https://media.self.com/photos/59e4deccf182ef345d648b67/4:3/w_2560%2Cc_limit/GettyImages-478377196.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 14
+        season_id: 3
     },
     {
         name: "Avocado",
         image: "https://www.jessicagavin.com/wp-content/uploads/2019/04/avocados-3-1200.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 15
+        season_id: 3
     },
     {
         name: "Bell Pepper",
         image: "https://images.saymedia-content.com/.image/t_share/MTc0MTgxNTM0MzI3MTIxNDA0/bell-peppers-do-the-different-colors-really-taste-any-different.jpg",
         on_list: false,
-        season_id: 3,
-        recipe_id: 16
+        season_id: 3
     },
     {
         name: "Apple",
         image: "https://images-na.ssl-images-amazon.com/images/I/81Dl5GdAVkL.png",
         on_list: false,
-        season_id: 4,
-        recipe_id: 17
+        season_id: 4
     },
     {
         name: "Pumpkin",
         image: "https://www.liveeatlearn.com/wp-content/uploads/2015/10/pumpkin-photo-1.jpg",
         on_list: false,
-        season_id: 4,
-        recipe_id: 18
+        season_id: 4
     },
     {
         name: "Pomegranate",
         image: "https://d47gxy3fatgwk.cloudfront.net/wp-content/uploads/2020/10/how-to-cook-with-pomegranate-251.jpg",
         on_list: false,
-        season_id: 4,
-        recipe_id: 19
+        season_id: 4
     },
     {
         name: "Acorn Squash",
         image: "https://www.yellowblissroad.com/wp-content/uploads/2016/10/Acorn-squash-1-lr.jpg",
         on_list: false,
-        season_id: 4,
-        recipe_id: 20
+        season_id: 4
     },
     {
         name: "Butternut Squash",
         image: "https://cdn-prod.medicalnewstoday.com/content/images/articles/284/284479/butternut-squash.jpg",
         on_list: false,
-        season_id: 4,
-        recipe_id: 21
+        season_id: 4
     },
     {
         name: "Eggplant",
         image: "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/279359_2200-1200x628.jpg",
         on_list: false,
-        season_id: 4,
-        recipe_id: 22
+        season_id: 4
     },
     {
         name: "Cranberries",
         image: "https://d279m997dpfwgl.cloudfront.net/wp/2018/11/1108_gunst-03.jpg",
         on_list: false,
-        season_id: 4,
-        recipe_id: 23
+        season_id: 4
     }
 ]
 
@@ -391,4 +362,132 @@ recipes = [
 
 recipes.each do |recipe_hash|
     Recipe.create(recipe_hash)
+end
+
+producerecipes = [
+
+{
+   recipe_id: 1,
+   produce_id: 3  
+},
+{
+   recipe_id: 1,
+   produce_id: 4 
+},
+{
+   recipe_id: 1,
+   produce_id: 7 
+},
+{
+   recipe_id: 2,
+   produce_id: 5  
+},
+{
+   recipe_id: 3,
+   produce_id: 6 
+},
+{
+   recipe_id: 4,
+   produce_id: 1  
+},
+{
+   recipe_id: 5,
+   produce_id: 2 
+},
+{
+   recipe_id: 6,
+   produce_id: 8 
+},
+{
+   recipe_id: 6,
+   produce_id: 14 
+},
+{
+   recipe_id: 7,
+   produce_id: 10  
+},
+{
+   recipe_id: 7,
+   produce_id: 11 
+},
+{
+   recipe_id: 8,
+   produce_id: 12 
+},
+{
+   recipe_id: 9,
+   produce_id: 13  
+},
+{
+   recipe_id: 9,
+   produce_id: 15 
+},
+{
+   recipe_id: 10,
+   produce_id: 9 
+},
+{
+   recipe_id: 11,
+   produce_id: 16 
+},
+{
+   recipe_id: 12,
+   produce_id: 19 
+},
+{
+   recipe_id: 12,
+   produce_id: 18 
+},
+{
+   recipe_id: 13,
+   produce_id: 20 
+},
+{
+   recipe_id: 14,
+   produce_id: 21 
+},
+{
+   recipe_id: 15,
+   produce_id: 22 
+},
+{
+   recipe_id: 16,
+   produce_id: 19 
+},
+{
+   recipe_id: 16,
+   produce_id: 23 
+},
+{
+   recipe_id: 17,
+   produce_id: 24 
+},
+{
+   recipe_id: 18,
+   produce_id: 25 
+},
+{
+   recipe_id: 19,
+   produce_id: 26 
+},
+{
+   recipe_id: 20,
+   produce_id: 27 
+},
+{
+   recipe_id: 21,
+   produce_id: 28 
+},
+{
+   recipe_id: 22,
+   produce_id: 29 
+},
+{
+   recipe_id: 23,
+   produce_id: 30 
+}
+]
+
+producerecipes.each do |producerecipe_hash|
+    ProduceRecipe.create(producerecipe_hash)
 end
