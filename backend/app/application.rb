@@ -24,10 +24,11 @@ class Application
     elsif req.path.match('/recipes/') && req.get?
       id = req.path.split("/").last
 
-      produces = Produce.where(season_id: id)
+      produce = Produce.where(season_id: id)
+      recipe_instances = produce.recipes
 
       recipes = []
-      produces.map{|produce| recipes.push(produce.recipe)}
+      recipe_instances.map{|recipe| recipes.push(recipe)}
 
       return [200, { 'Content-Type' => 'application/json' }, [ recipes.uniq.to_json ]]
 
