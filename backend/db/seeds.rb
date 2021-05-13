@@ -434,10 +434,10 @@ producerecipes = [
    recipe_id: 12,
    produce_id: 19 
 },
-{
-   recipe_id: 12,
-   produce_id: 18 
-},
+# {
+#    recipe_id: 12,
+#    produce_id: 18 
+# },
 {
    recipe_id: 13,
    produce_id: 20 

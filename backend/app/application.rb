@@ -9,10 +9,8 @@ class Application
       
       return [200, { 'Content-Type' => 'application/json' }, [ seasons.to_json ]]
 
-    elsif req.path.match('/seasons/') && req.get?
-      id = req.path.split("/").last
-
-      produces = Produce.where(season_id: id)
+    elsif req.path == "/produces" && req.get?
+      produces = Produce.all
 
       return [200, { 'Content-Type' => 'application/json' }, [ produces.to_json ]]
 
@@ -20,6 +18,18 @@ class Application
       recipes = Recipe.all
 
       return [200, { 'Content-Type' => 'application/json' }, [ recipes.to_json ]]
+
+    elsif req.path == ('/producerecipes') && req.get?
+      producerecipes = ProduceRecipe.all
+
+      return [200, { 'Content-Type' => 'application/json' }, [ producerecipes.to_json ]]
+
+    elsif req.path.match('/seasons/') && req.get?
+      id = req.path.split("/").last
+
+      produces = Produce.where(season_id: id)
+
+      return [200, { 'Content-Type' => 'application/json' }, [ produces.to_json ]]
 
     elsif req.path.match('/recipes/') && req.get?
       id = req.path.split("/").last
