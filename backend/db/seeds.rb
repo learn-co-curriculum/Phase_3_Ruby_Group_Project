@@ -36,7 +36,7 @@ produces = [
     },
     {
         name: "Limes",
-        image: "https://lh3.googleusercontent.com/proxy/V0ew2OF6WsFJG41d_yfpoStpOg9UQKEZGRWuU4zqdJvS7cHR6t2OIaezXGgvtK4dmVuvFAXh1luDRh_RHC1pXmNVnjM7CLokkwKFo9evYTd0ttjiBjmQpQ",
+        image: "https://images.unsplash.com/photo-1558490946-2cf6cab78c60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1525&q=80",
         on_list: false,
         season_id: 1
     },
@@ -191,7 +191,7 @@ produces.each do |produce_hash|
     Produce.create(produce_hash)
 end
 
-winter = Season.create(name: "Winter", image: "https://guardianlv.com/wp-content/uploads/2013/09/fall-road.jpg")
+winter = Season.create(name: "Winter", image: "https://images.unsplash.com/photo-1511803471753-da23b1a92d4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
 spring = Season.create(name: "Spring", image: "https://c4.wallpaperflare.com/wallpaper/665/343/798/spring-high-resolution-wallpaper-preview.jpg")
 summer = Season.create(name: "Summer", image: "http://www.iberkshires.com/images/feature/1586875303.jpg")
 fall = Season.create(name: "Fall", image: "https://guardianlv.com/wp-content/uploads/2013/09/fall-road.jpg")
