@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: e1bd4a5a57775b724e8441ffa14cce0861b5a4b6
+  branch: master
+  specs:
+    faker (2.18.0)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,10 +72,18 @@ GEM
       thread_safe (~> 0.1)
 
 PLATFORMS
+<<<<<<< HEAD
   x86_64-darwin-19
 
 DEPENDENCIES
   activerecord (~> 5.2)
+=======
+  x86_64-darwin-20
+
+DEPENDENCIES
+  activerecord (~> 5.2)
+  faker!
+>>>>>>> 781d8843c51a37a411c5be99b8543f93013c2807
   pry
   rack
   rack-cors
@@ -79,4 +95,8 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
+<<<<<<< HEAD
    2.2.15
+=======
+   2.2.13
+>>>>>>> 781d8843c51a37a411c5be99b8543f93013c2807
