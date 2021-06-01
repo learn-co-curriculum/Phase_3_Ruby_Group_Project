@@ -5,16 +5,16 @@ Patron.destroy_all
 Resort.destroy_all
 
 puts "Creating Resorts..."
-salamander_resort = Resort.create(resort_name: "Salamander Resort & Spa", location: "Nassau", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0 )
-penguin_resort = Resort.create(resort_name: "Penguin Resort", location: "Galápagos", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-sandalwood_resort = Resort.create(resort_name: "Sandalwood Beach Resort & Spa", location: "Punta Cana", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-pearl_resort = Resort.create(resort_name: "Pearl Golf Resort", location: "Negril", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-peninsula_resort = Resort.create(resort_name: "Peninsula Resort & Spa", location: "Maldives", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-refinery_resort = Resort.create(resort_name: "Refinery Resort & Spa", location: "Punta Cana", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-tritan_resort = Resort.create(resort_name: "Tritan Beach Resort", location: "Negril", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-four_seasons_resort = Resort.create(resort_name: "Four Seasons Resort", location: "Maldives", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-cosmopolitan_resort = Resort.create(resort_name: "Cosmopolitan Resort & Spa", location: "Nassau", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
-somass_resort = Resort.create(resort_name: "Somass Resort", location: "Galápagos", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "", rating: 0)
+salamander_resort = Resort.create(resort_name: "Salamander Resort & Spa", location: "Nassau", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://cdn.sandals.com/beaches/v12/images/home/resorts/beaches-negril.jpg", rating: 0 )
+penguin_resort = Resort.create(resort_name: "Penguin Resort", location: "Galápagos", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://cf.bstatic.com/images/hotel/max1024x768/233/233068480.jpg", rating: 0)
+sandalwood_resort = Resort.create(resort_name: "Sandalwood Beach Resort & Spa", location: "Punta Cana", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://azbigmedia.com/wp-content/uploads/2020/03/wow-factor.jpg", rating: 0)
+pearl_resort = Resort.create(resort_name: "Pearl Golf Resort", location: "Negril", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://www.bermudareal.com/wp-content/uploads/2020/07/ja-small-hotels-Beaches-Resorts-Negril.jpg", rating: 0)
+peninsula_resort = Resort.create(resort_name: "Peninsula Resort & Spa", location: "Maldives", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://tr-images.condecdn.net/image/xMV93VXoYRR/crop/1620/f/vatuvara-private-islands-fiji-conde-nast-traveller-9nov16-pr.jpg", rating: 0)
+refinery_resort = Resort.create(resort_name: "Refinery Resort & Spa", location: "Punta Cana", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f4/14/08/beach-overview.jpg?w=900&h=-1&s=1", rating: 0)
+tritan_resort = Resort.create(resort_name: "Tritan Beach Resort", location: "Negril", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://2486634c787a971a3554-d983ce57e4c84901daded0f67d5a004f.ssl.cf1.rackcdn.com/couples-resorts/media/couples-negril-gallery-17-5c785260494d7.jpg", rating: 0)
+four_seasons_resort = Resort.create(resort_name: "Four Seasons Resort", location: "Maldives", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://tr-images.condecdn.net/image/xMV93VXoYRR/crop/1620/f/vatuvara-private-islands-fiji-conde-nast-traveller-9nov16-pr.jpg", rating: 0)
+cosmopolitan_resort = Resort.create(resort_name: "Cosmopolitan Resort & Spa", location: "Nassau", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://www.oyster.com/wp-content/uploads/sites/35/2019/10/beach-pool-v18496517-nw-2000-1024x682.jpg", rating: 0)
+somass_resort = Resort.create(resort_name: "Somass Resort", location: "Galápagos", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://www.gannett-cdn.com/presto/2020/01/13/USAT/2013166a-8a03-4df3-ba3b-e8a14426fee2-Sandals_Royal_Barbados_Main_Pool_PHOTO_1.jpg?crop=7235,4070,x1,y595&width=3200&height=1801&format=pjpg&auto=webp", rating: 0)
 
 puts "Creating Patrons..."
 20.times do 
