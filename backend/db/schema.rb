@@ -22,9 +22,7 @@ ActiveRecord::Schema.define(version: 2021_05_31_154233) do
   end
 
   create_table "excursions", force: :cascade do |t|
-    t.integer "patron_id"
     t.integer "resort_id"
-    t.integer "booking_id"
     t.string "excursion_type"
     t.string "excursion_name"
     t.boolean "most_popular"
@@ -33,18 +31,12 @@ ActiveRecord::Schema.define(version: 2021_05_31_154233) do
   end
 
   create_table "patrons", force: :cascade do |t|
-    t.integer "resort_id"
-    t.integer "booking_id"
-    t.integer "excursion_id"
     t.string "patron_name"
     t.integer "age"
     t.boolean "payment_info"
   end
 
   create_table "resorts", force: :cascade do |t|
-    t.integer "patron_id"
-    t.integer "excursion_id"
-    t.integer "booking_id"
     t.string "resort_name"
     t.string "location"
     t.string "image_url"
