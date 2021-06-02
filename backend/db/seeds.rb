@@ -17,15 +17,15 @@ cosmopolitan_resort = Resort.create(resort_name: "Cosmopolitan Resort & Spa", lo
 somass_resort = Resort.create(resort_name: "Somass Resort", location: "Galápagos", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://www.gannett-cdn.com/presto/2020/01/13/USAT/2013166a-8a03-4df3-ba3b-e8a14426fee2-Sandals_Royal_Barbados_Main_Pool_PHOTO_1.jpg?crop=7235,4070,x1,y595&width=3200&height=1801&format=pjpg&auto=webp", rating: 0)
 
 puts "Creating Excursions.."
-penguin_hiking = Excursion.create(excursion_name: "Penguin Hiking", excursion_type: "Adventure", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample)
-surfing = Excursion.create(excursion_name: "Surfing", excursion_type: "Health", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample)
-snorkeling = Excursion.create(excursion_name: "Snorkeling", excursion_type: "Adventure", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample)
-horseback_riding = Excursion.create(excursion_name: "Horseback Riding", excursion_type: "Adventure", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample)
-private_chef = Excursion.create(excursion_name: "Private Chef", excursion_type: "Dining", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample) 
-wine_tasting = Excursion.create(excursion_name: "Wine Tasting", excursion_type: "Dining", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample)
-yoga_class = Excursion.create(excursion_name: "Yoga", excursion_type: "Health", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample)
+penguin_hiking = Excursion.create(excursion_name: "Penguin Hiking", excursion_type: "Adventure", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'))
+surfing = Excursion.create(excursion_name: "Surfing", excursion_type: "Health", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'))
+snorkeling = Excursion.create(excursion_name: "Snorkeling", excursion_type: "Adventure", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'))
+horseback_riding = Excursion.create(excursion_name: "Horseback Riding", excursion_type: "Adventure", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'))
+private_chef = Excursion.create(excursion_name: "Private Chef", excursion_type: "Dining", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31')) 
+wine_tasting = Excursion.create(excursion_name: "Wine Tasting", excursion_type: "Dining", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'))
+yoga_class = Excursion.create(excursion_name: "Yoga", excursion_type: "Health", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'))
 massage = Excursion.create(excursion_name: "Massage", excursion_type: "Spa", most_popular: false, description: "", excursion_image_url: "")
-facial_massage = Excursion.create(excursion_name: "Facial & Massage", excursion_type: "Spa", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample)
+facial_massage = Excursion.create(excursion_name: "Facial & Massage", excursion_type: "Spa", most_popular: false, description: "", excursion_image_url: "", resort_id: Resort.ids.sample, reservation: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'))
 
 puts "Creating Patrons..."
 20.times do 

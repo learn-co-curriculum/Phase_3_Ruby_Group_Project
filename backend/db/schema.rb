@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_05_31_154233) do
     t.boolean "most_popular"
     t.text "description"
     t.string "excursion_image_url"
+    t.datetime "reservation"
   end
 
   create_table "patrons", force: :cascade do |t|
