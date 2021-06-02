@@ -9,6 +9,7 @@ class CreateExcursions < ActiveRecord::Migration[5.2]
       t.boolean :most_popular 
       t.text :description 
       t.string :excursion_image_url 
+      t.datetime :reservation 
     end 
   end
 end

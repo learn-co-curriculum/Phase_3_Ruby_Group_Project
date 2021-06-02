@@ -10,7 +10,7 @@ class Application
     elsif req.path.match(/resorts/) && req.get?
 
       resorts = Resort.all.map do |resort|
-        {id: resort.id, resort_name: resort.resort_name, location: resort.location, availability: resort.availability, image_url: resort.image_url, rating: resort.rating}
+        {id: resort.id, resort_name: resort.resort_name, location: resort.location, availability: resort.availability.strftime("%B %d, %Y"), image_url: resort.image_url, rating: resort.rating}
       end
 
       return [200, { 'Content-Type' => 'application/json' }, [ {:resorts => resorts}.to_json ]] 
@@ -19,7 +19,6 @@ class Application
 
       patrons = Patron.all.map do |patron|
         {id: patron.id, patron_name: patron.patron_name, age: patron.age, payment_info: patron.payment_info}
-        # {id: patron.id, resort_id: patron.resort_id, booking_id: patron.booking_id, excursion_id: patron.excursion_id, patron_name: patron.patron_name, age: patron.age, payment_info: patron.payment_info}
       end
 
       return [200, { 'Content-Type' => 'application/json' }, [ {:patrons => patrons}.to_json ]] 
