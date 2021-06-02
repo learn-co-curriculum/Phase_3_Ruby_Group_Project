@@ -34,7 +34,7 @@ class Application
     elsif req.path.match(/bookings/) && req.get?
 
       bookings = Booking.all.map do |booking|
-        {id: booking.id, patron_id: booking.patron_id, resort_id: booking.resort_id, excursion_id: booking.excursion_id, room_type: booking.room_type, start_date: booking.start_date, end_date: booking.end_date}
+        {id: booking.id, patron_id: booking.patron_id, resort_id: booking.resort_id, excursion_id: booking.excursion_id, room_type: booking.room_type, start_date: booking.start_date.strftime("%B %d, %Y"), end_date: booking.end_date.strftime("%B %d, %Y")}
       end
 
       return [200, { 'Content-Type' => 'application/json' }, [ {:bookings => bookings}.to_json ]] 
