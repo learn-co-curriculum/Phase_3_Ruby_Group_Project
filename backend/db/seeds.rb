@@ -43,12 +43,16 @@ end
 puts "Creating Bookings..."
 room_types = ["Single Suite", "Double Suite", "Family Suite", "Couples Suite", "Penthouse Suite", "Presidential Suite", "Honeymoon Suite", "Oceanfront Suite", "Oceanview Suite"]
 
+
+random_dates = [Time.new(2021, 5, 31), Time.new(2021, 1, 1), Time.new(2021, 4, 26), Time.new(2022, 12, 25), Time.new(2021, 8, 18), Time.new(2021, 10, 31), Time.new(2021, 2, 14), Time.new(2021, 3, 17), Time.new(2021, 7, 16), Time.new(2021, 10, 10)]
+
+
 20.times do 
     patron_id = Patron.ids.sample 
     resort_id = Resort.ids.sample
     excursion_id = Excursion.ids.sample 
     room_type = room_types.sample
-    start_date = Time.new(2021, 5, 31)
+    start_date = random_dates.sample
     end_date = start_date + 432000
 
     Booking.create(patron_id: patron_id, resort_id: resort_id, excursion_id: excursion_id, room_type: room_type, start_date: start_date, end_date: end_date)
