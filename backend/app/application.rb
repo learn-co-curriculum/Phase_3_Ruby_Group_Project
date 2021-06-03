@@ -44,6 +44,14 @@ class Application
         createNewPatron = Patron.create(newPatron)
       return [201, { 'Content-Type' => 'application/json' }, [ createNewPatron.to_json ]]
 
+    elsif req.path.match(/resorts/) && req.patch?
+      id = req.path.split("/").last
+      found_res = Booking.find_by(start_date)
+      found_res.destroy
+
+      return [200, { 'Content-Type' => 'application/json' }, [ found_res.to_json ]]
+
+
     else
       resp.write "Path Not Found"
 
