@@ -17,11 +17,11 @@ class Application
 
     elsif req.path.match(/patrons/) && req.get?
 
-      patrons = Patron.all.map do |patron|
-        {id: patron.id, patron_name: patron.patron_name, age: patron.age, payment_info: patron.payment_info}
-      end
+      # patrons = Patron.all.map do |patron|
+        # {id: patron.id, patron_name: patron.patron_name, age: patron.age, payment_info: patron.payment_info, email: email, phone_number: phone_number}
+      # end
 
-      return [200, { 'Content-Type' => 'application/json' }, [ {:patrons => patrons}.to_json ]] 
+      return [200, { 'Content-Type' => 'application/json' }, [ Patron.all.to_json ]] 
 
     elsif req.path.match(/excursions/) && req.get?
 
@@ -39,10 +39,16 @@ class Application
 
       return [200, { 'Content-Type' => 'application/json' }, [ {:bookings => bookings}.to_json ]] 
 
+    elsif req.path.match(/patrons/) && req.post?
+        newPatron = JSON.parse(req.body.read)
+        createNewPatron = Patron.create(newPatron)
+      return [201, { 'Content-Type' => 'application/json' }, [ createNewPatron.to_json ]]
+
     else
       resp.write "Path Not Found"
 
     end
+
 
     resp.finish
   end

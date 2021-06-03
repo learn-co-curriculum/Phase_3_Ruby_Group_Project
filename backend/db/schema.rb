@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2021_05_31_154233) do
   create_table "patrons", force: :cascade do |t|
     t.string "patron_name"
     t.integer "age"
+    t.integer "phone_number"
+    t.string "email"
     t.boolean "payment_info"
   end
 

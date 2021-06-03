@@ -35,8 +35,10 @@ puts "Creating Patrons..."
     patron_name = Faker::Name.unique.name
     age = rand(18..99)
     payment_info = false 
+    phone_number = 123456789
+    email = ""
 
-    Patron.create(patron_name: patron_name, age: age, payment_info: payment_info)
+    Patron.create(patron_name: patron_name, age: age, payment_info: payment_info, phone_number: phone_number, email: email)
     # Patron.create(resort_id: resort_id, booking_id: booking_id, excursion_id: excursion_id, patron_name: patron_name, age: age, payment_info: payment_info)
 end 
 
@@ -54,8 +56,9 @@ random_dates = [Time.new(2021, 5, 31), Time.new(2021, 1, 1), Time.new(2021, 4, 2
     room_type = room_types.sample
     start_date = random_dates.sample
     end_date = start_date + 432000
+    
 
-    Booking.create(patron_id: patron_id, resort_id: resort_id, excursion_id: excursion_id, room_type: room_type, start_date: start_date, end_date: end_date, phone_number: phone_number, email: email)
+    Booking.create(patron_id: patron_id, resort_id: resort_id, excursion_id: excursion_id, room_type: room_type, start_date: start_date, end_date: end_date)
 end 
 
 
