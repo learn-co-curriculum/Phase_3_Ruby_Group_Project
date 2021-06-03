@@ -6,6 +6,8 @@ class CreatePatrons < ActiveRecord::Migration[5.2]
       # t.integer :excursion_id
       t.string :patron_name
       t.integer :age
+      t.integer :phone_number 
+      t.string :email 
       t.boolean :payment_info 
     end 
   end

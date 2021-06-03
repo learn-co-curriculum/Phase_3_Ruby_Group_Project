@@ -55,7 +55,7 @@ random_dates = [Time.new(2021, 5, 31), Time.new(2021, 1, 1), Time.new(2021, 4, 2
     start_date = random_dates.sample
     end_date = start_date + 432000
 
-    Booking.create(patron_id: patron_id, resort_id: resort_id, excursion_id: excursion_id, room_type: room_type, start_date: start_date, end_date: end_date)
+    Booking.create(patron_id: patron_id, resort_id: resort_id, excursion_id: excursion_id, room_type: room_type, start_date: start_date, end_date: end_date, phone_number: phone_number, email: email)
 end 
 
 
