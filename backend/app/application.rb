@@ -26,7 +26,7 @@ class Application
     elsif req.path.match(/excursions/) && req.get?
 
       excursions = Excursion.all.map do |excursion|
-        {id: excursion.id, excursion_name: excursion.excursion_name, excursion_type: excursion.excursion_type, most_popular: excursion.most_popular, description: excursion.description, excursion_image_url: excursion.excursion_image_url, resort_id: excursion.resort_id}
+        {id: excursion.id, excursion_name: excursion.excursion_name, excursion_type: excursion.excursion_type, most_popular: excursion.most_popular, description: excursion.description, excursion_image_url: excursion.excursion_image_url, resort_id: excursion.resort_id, reservation: excursion.reservation}
       end
 
       return [200, { 'Content-Type' => 'application/json' }, [ {:excursions => excursions}.to_json ]] 
